@@ -10,7 +10,7 @@ function TodoList({ todos, updateTodo, deleteTodo }) {
   });
 
   return (
-    <div>
+    <div className='bottom'>
       <div >
         <div className="filter"> 
         <label> StatusFilter</label>

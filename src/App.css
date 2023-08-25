@@ -6,7 +6,9 @@
     color: aqua;
 }
 .form-styling{
-  
+  display: flex;
+  justify-content: space-evenly;
+
 }
 .texting{
   margin-right: 20px;
@@ -24,4 +26,8 @@
 
 .todo-list{
   display:inline-block
+}
+.todo-card{
+  display: flex;
+  justify-content: space-evenly;
 }

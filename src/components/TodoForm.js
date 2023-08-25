@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 function TodoForm({ addTodo }) {
   const [task, setTask] = useState('');
   const [description, setDescription] = useState('');
@@ -21,19 +22,21 @@ function TodoForm({ addTodo }) {
 
   return (
     <form className='form-styling'  onSubmit={handleSubmit}>
-      <input className='texting'
+      <TextField className='texting'  placeholder="Task" value={task}  onChange={(e) => setTask(e.target.value)} variant="outlined" />
+      {/* <input className='texting'
         type="text"
         placeholder="Task"
         value={task}
         onChange={(e) => setTask(e.target.value)}
-      />
-      <input className='texting'
+      /> */}
+      {/* <input className='texting'
         type="text"
         placeholder="Description"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
-      />
-      <button className='textings' type="submit">Add Todo</button>
+      /> */}
+      <TextField className='texting' placeholder="Description" value={description}  onChange={(e) => setDescription(e.target.value)} variant="outlined" />
+      <Button className='textings' type="submit">Add Todo</Button>
     </form>
   );
 }
