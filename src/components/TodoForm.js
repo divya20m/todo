@@ -17,7 +17,7 @@ const [editingId, setEditingId] = useState(null);
 
 const handleSubmit = (e) => {
   e.preventDefault();
-  if (task.trim() !== '') {
+  if (task.trim() !== '' && description.trim() === '') {
     const newTodo = { task: task, description: description };
     setSavedTodo([...savedtodo, newTodo]);
     setTask('');
